@@ -1,4 +1,4 @@
-# Transcriptomic (RNA-Seq) Analysis of Renal Fibrosis in SMOC2-Overexpressing Mice
+# Transcriptomic (RNA-Seq) Analysis of Renal Fibrosis in SMOC2-Overexpressing Mice (WIP)
 
 ---
 
@@ -34,7 +34,7 @@
 
 - Size factors were estimated and used for normalization via DESeq2. Variance stabilizing transformation (VST) was applied blind to experimental condition. A sample correlation heatmap was generated to assess inter-sample similarity. Then, Principal Component Analysis (PCA) was performed on VST-transformed counts to confirm separation by condition. Lastly, Dispersion estimates were plotted to verify model fit prior to differential expression testing.
 
-### Differential expression analysis:
+### Differential expression analysis (DEA):
 
 - DESeq2 was used with `smoc2_normal` as the reference level. Results were extracted for the contrast fibrosis vs. normal with α = 0.05 and a log2 fold change (LFC) threshold of 0.32. Log2 fold changes were shrunk using the `apeglm` method to reduce noise from low-count genes. Adjusted p-values (FDR) were computed using the Benjamini-Hochberg (BH) method. Significant DEGs were defined as *p adj.* < 0.05.
 
@@ -48,6 +48,23 @@
 
 ## Results:
 
+### Quality control:
+
+- The heatmap shows clean separation between the normal and fibrosis groups. Normal samples (red) correlate highly with each other and fibrosis samples (blue) correlate highly with each other, and the two groups are clearly distinct. All correlations are above 0.96, denoting good sample quality with no obvious outliers.
+
+![](/smoc2_plots/smoc2_heatmap.jpg)
+
+- The dispersion plot shows that gene-wise estimates (black dots) decrease as mean expression increases, and they cluster tightly around the fitted line (red). The final shrunken estimates (blue) follow the trend closely, meaning that DESeq2's model fit is appropriate for the data.
+
+![](/smoc2_plots/smoc2_dispersion.jpg)
+
+### DEA:
+
+- DE analysis yielded 7563 DEGs, of which 4011 were upregulated and 3552 were downregulated.
+
+![](/smoc2_plots/smoc2_volcano.jpg)
+
+  
 ## Interpretation:
 
 ## Tools and packages used:
