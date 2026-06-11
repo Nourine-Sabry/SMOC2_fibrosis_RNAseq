@@ -1,4 +1,10 @@
-# SMOC2_fibrosis_RNAseq
+# Transcriptomic (RNA-Seq) Analysis of Renal Fibrosis in SMOC2-Overexpressing Mice
+
+---
+
+![](renal.png)
+
+---
 
 ## Background:
 
@@ -9,6 +15,7 @@
 - **Model:** Unilateral ureteral obstruction (UUO)
 - **Samples:** 7 SMOC2-overexpressing samples (3 normal, 4 UUO/fibrosis)
 - **Data type:** Raw counts, Ensembl gene IDs
+- **Original study:** https://insight.jci.org/articles/view/90299
 
 ## Goal of the analysis:
 
@@ -53,3 +60,5 @@
 - enrichplot
 
 ## Acknowledgement:
+
+- This project was completed as part of my RNA-seq learning journey and was inspired by concepts and workflows introduced in the DataCamp course ["IRNA-Seq with Bioconductor in R"](https://app.datacamp.com/learn/courses/rna-seq-with-bioconductor-in-r). Portions of the analysis structure and some code elements were adapted from course exercises and instructional materials for educational purposes. The dataset, downstream analyses, interpretation, and repository were conducted as a public reanalysis project.
