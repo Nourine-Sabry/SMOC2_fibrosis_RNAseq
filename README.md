@@ -4,6 +4,16 @@
 
 ## About the dataset:
 
+- **GEO accession:** [GSE85209](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE85209)
+- **Organism:** *Mus musculus*
+- **Model:** Unilateral ureteral obstruction (UUO)
+- **Samples:** 7 SMOC2-overexpressing samples (3 normal, 4 UUO/fibrosis)
+- **Data type:** Raw counts, Ensembl gene IDs
+
+## Goal of the analysis:
+
+
+
 ## Workflow:
 
 ### Data collection:
@@ -12,12 +22,34 @@
 
 ### Quality control:
 
-- The resulting dataset was subjected to quality control. First, (zeroes). Second, (low expression genes?).
+- Size factors were estimated and used for normalization via DESeq2. Variance stabilizing transformation (VST) was applied blind to experimental condition. A sample correlation heatmap was generated to assess inter-sample similarity. Then, Principal Component Analysis (PCA) was performed on VST-transformed counts to confirm separation by condition. Lastly, Dispersion estimates were plotted to verify model fit prior to differential expression testing.
+
+### Differential expression analysis:
+
+- DESeq2 was used with `smoc2_normal` as the reference level. Results were extracted for the contrast fibrosis vs. normal with α = 0.05 and a log2 fold change (LFC) threshold of 0.32. Log2 fold changes were shrunk using the `apeglm` method to reduce noise from low-count genes. Adjusted p-values (FDR) were computed using the Benjamini-Hochberg (BH) method. Significant DEGs were defined as *p adj.* < 0.05.
+
+### Functional enrichment analysis / Overrepresentation analysis (ORA):
+
+- Overrepresentation analysis was performed on significant DEGs using `clusterProfiler` for all three gene ontology (GO) categories: Biological Process (BP), Molecular Function (MF), and Cellular Component (CC). As well as KEGG pathway enrichment analysis. Results were visualized as dotplots, barplots, and enrichment maps
+
+### Gene-set enrichment analysis (GSEA):
+
+- GSEA was performed on the full ranked gene list (ranked by log2FoldChange) using `gseKEGG` to detect coordinated pathway-level shifts independent of a significance threshold. Results were visualized as dotplots and ridge plots.
 
 ## Results:
 
 ## Interpretation:
 
 ## Tools and packages used:
+
+- R/Bioconductor & RStudio
+- DESeq2
+- RColorBrewer
+- pheatmap
+- tidyverse
+- apeglm
+- clusterProfiler
+- org.Mm.eg.db  
+- enrichplot
 
 ## Acknowledgement:
