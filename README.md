@@ -54,17 +54,30 @@
 
 ![](/smoc2_plots/smoc2_heatmap.jpg)
 
-- The dispersion plot shows that gene-wise estimates (black dots) decrease as mean expression increases, and they cluster tightly around the fitted line (red). The final shrunken estimates (blue) follow the trend closely, meaning that DESeq2's model fit is appropriate for the data.
+- PC1 captures 93% of the variance and separates fibrosis from normal samples along the horizontal axis.
+
+![](/smoc2_plots/smoc2_pca.jpg)
+  
+### DEA:
+
+- The dispersion plot shows that gene-wise estimates (black dots) decrease as mean expression increases, and they cluster tightly around the fitted line (red). The final shrunken estimates (blue) follow the trend closely, indicating appropriate DESeq2 model fit.
 
 ![](/smoc2_plots/smoc2_dispersion.jpg)
-
-### DEA:
 
 - DE analysis yielded 7563 DEGs, of which 4011 were upregulated and 3552 were downregulated.
 
 ![](/smoc2_plots/smoc2_volcano.jpg)
 
-  
+- Significant DEGs (blue) are distributed across the full range of expression. Low-count genes have their fold changes pulled toward zero (the band near LFC=0 at low mean counts). Significant genes are spread across both moderate and high expression levels.
+
+![](/smoc2_plots/smoc2_ma.jpg)
+
+- The heatmap of significant DEGs shows two clear gene clusters, one strongly upregulated in fibrosis (magenta in fibrosis samples, lavender in normal samples), and one strongly downregulated (lavender in fibrosis, magenta in normal). The sample clustering clusters normal samples from fibrosis samples properly, indicating a strong differential expression signal.
+
+![](/smoc2_plots/smoc2_heatmap_norm.jpg)
+
+### Enrichment analysis:
+
 ## Interpretation:
 
 ## Tools and packages used:
