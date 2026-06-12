@@ -9,7 +9,8 @@
 ## Background:
 
 - Chronic kidney disease (CKD) is a heterogenous disease that refers to any abnormalities in the structure of function of the kidneys that is present for more than 3 months. A hallmark of CKD is tubulo-interstitial injury that leads to a surplus of extracellular matrix (ECM) protein deposition leading to fibrosis and scarring. The mechanisms underlying kidney fibrosis are complicated and still under investigation. However, recent advances in sequencing technologies and the emergence of the omics era have enabled researchers to answer many questions surrounding this topic, thereby facilitating the discovery of fibrotic injury biomarkers and the identification of antifibrotic therapeutic targets.
-- Secreted modular calcium-binding protein 2 (SMOC2) is 
+  
+- Secreted modular calcium-binding protein 2 (SMOC2) is a protein belonging to the Secreted Protein Acidic and Rich in Cysteine (SPARC) matricellular protein family. It is secreted in the extracellular space and interact with a variety of bioactive effectors including structural matrix proteins, cell surface receptors, growth factors, and proteases. It serves to regulate cell-matrix interactions and cell functions. SMOC2 is mainly secreted in the kidneys, lungs, ovaries, and skeletal muscles. Owing to its role in triggering the fibroblast-to-myofibroblast transition (FMT), SMOC2 has been implicated in the progression of fibrotic disorders. However, the mechanisms underlying SMOC2's involvement in initiating fibrosis have yet to be fully uncovered, making it a target of interest in the study of fibrotic disorder intiation and progression.
 
 ## About the dataset:
 
@@ -22,7 +23,7 @@
 
 ## Goal of the analysis:
 
-- The aim of this project is to 
+- The aim of this project is to investigate how induction of SMOC2 in kidneys affect the progression of kidney fibrosis and to identify affected genes and biological pathways associated with fibrosis.
 
 ## Workflow:
 
@@ -78,6 +79,8 @@
 
 ### Enrichment analysis:
 
+### GSEA:
+
 ## Interpretation:
 
 ## Tools and packages used:
@@ -94,4 +97,11 @@
 
 ## Acknowledgement:
 
-- This project was completed as part of my RNA-seq learning journey and was inspired by concepts and workflows introduced in the DataCamp course ["RNA-Seq with Bioconductor in R"](https://app.datacamp.com/learn/courses/rna-seq-with-bioconductor-in-r). Portions of the analysis structure and some code elements were adapted from course exercises and instructional materials for educational purposes. The dataset, downstream analyses, and interpretation were conducted as a public reanalysis project.
+- This project was completed as part of my RNA-seq learning journey and was inspired by concepts and workflows introduced in the DataCamp course ["RNA-Seq with Bioconductor in R"](https://app.datacamp.com/learn/courses/rna-seq-with-bioconductor-in-r). Portions of the analysis structure and some code elements (largely in the differential expression analysis part) were adapted from course exercises and instructional materials for educational purposes. The transcriptomic analysis, downstream analyses, and interpretation were conducted as a public reanalysis project.
+
+## References:
+
+1. JCI Insight. 2017;2(8):e90299. https://doi.org/10.1172/jci.insight.90299.
+2. Huang, R., Fu, P. & Ma, L. Kidney fibrosis: from mechanisms to therapeutic medicines. Sig Transduct Target Ther 8, 129 (2023). https://doi.org/10.1038/s41392-023-01379-7
+3. Xin C, Lei J, Wang Q. Therapeutic silencing of SMOC2 prevents kidney function loss in mouse model of chronic kidney disease, iScience, 2021; 24. https://www.cell.com/iscience/fulltext/S2589-0042(21)01161-5
+4. Rui H, Zhao F, Yuhua L and Hong J (2023) Suppression of SMOC2 alleviates myocardial fibrosis via the ILK/p38 pathway. Front. Cardiovasc. Med. 9:951704. doi: 10.3389/fcvm.2022.951704
