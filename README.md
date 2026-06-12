@@ -1,7 +1,5 @@
 # Transcriptomic (RNA-Seq) Analysis of Renal Fibrosis in SMOC2-Overexpressing Mice (WIP)
 
----
-
 ![](renal.png)
 
 ---
@@ -12,6 +10,8 @@
   
 - Secreted modular calcium-binding protein 2 (SMOC2) is a protein belonging to the Secreted Protein Acidic and Rich in Cysteine (SPARC) matricellular protein family. It is secreted in the extracellular space and interact with a variety of bioactive effectors including structural matrix proteins, cell surface receptors, growth factors, and proteases. It serves to regulate cell-matrix interactions and cell functions. SMOC2 is mainly secreted in the kidneys, lungs, ovaries, and skeletal muscles. Owing to its role in triggering the fibroblast-to-myofibroblast transition (FMT), SMOC2 has been implicated in the progression of fibrotic disorders. However, the mechanisms underlying SMOC2's involvement in initiating fibrosis have yet to be fully uncovered, making it a target of interest in the study of fibrotic disorder intiation and progression.
 
+---
+
 ## About the dataset:
 
 - **GEO accession:** [GSE85209](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE85209)
@@ -21,9 +21,13 @@
 - **Data type:** Raw counts, Ensembl gene IDs
 - **Original study:** https://insight.jci.org/articles/view/90299
 
+---
+
 ## Goal of the analysis:
 
 - The aim of this project is to investigate how induction of SMOC2 in kidneys affect the progression of kidney fibrosis and to identify affected genes and biological pathways associated with fibrosis.
+
+---
 
 ## Workflow:
 
@@ -46,6 +50,8 @@
 ### Gene-set enrichment analysis (GSEA):
 
 - GSEA was performed on the full ranked gene list (ranked by log2FoldChange) using `gseKEGG` to detect coordinated pathway-level shifts independent of a significance threshold. Results were visualized as dotplots and ridge plots.
+
+---
 
 ## Results:
 
@@ -81,7 +87,11 @@
 
 ### GSEA:
 
+---
+
 ## Interpretation:
+
+---
 
 ## Tools and packages used:
 
@@ -95,9 +105,13 @@
 - org.Mm.eg.db  
 - enrichplot
 
+---
+
 ## Acknowledgement:
 
 - This project was completed as part of my RNA-seq learning journey and was inspired by concepts and workflows introduced in the DataCamp course ["RNA-Seq with Bioconductor in R"](https://app.datacamp.com/learn/courses/rna-seq-with-bioconductor-in-r). Portions of the analysis structure and some code elements (largely in the differential expression analysis part) were adapted from course exercises and instructional materials for educational purposes. The transcriptomic analysis, downstream analyses, and interpretation were conducted as a public reanalysis project.
+
+---
 
 ## References:
 
