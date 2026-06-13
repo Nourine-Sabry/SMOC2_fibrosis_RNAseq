@@ -109,6 +109,8 @@
 
 - The GSEA results show that the strongest activated signal is cytokine-cytokine receptor interaction, amongst TNF signaling, IL-17 signaling, NF-κB signaling, and chemokine signaling. This suggests a pro-inflammatory signature. Additionally, cell adhesion molecule (CAM) interaction and osteoclast differentiation denote ECM remodeling and tissue remodeling responses, in line with SMOC2's role as a matricellular protein that promotes fibroblast activation. Whereas the suppressed signals indicate signs of mitochondrial dysfunction and metabolic reprogramming: oxidative phosphorylation and thermogenesis, as well as carbon metabolism, propanoate metabolism, glyoxylate and dicarboxylate metabolism, and amino acid degradation pathways suggest the dysfunction of key metabolic pathways. Furthermore, peroxisome suppression suggests impaired fatty acid oxidation.
 
+![](/smoc2_plots/smoc2_gsea_kegg_updated.jpg)
+
 ---
 
 ## Interpretation:
