@@ -6,7 +6,7 @@
 
 ## Background:
 
-- Chronic kidney disease (CKD) is a heterogenous disease that refers to any abnormalities in the structure of function of the kidneys that is present for more than 3 months. A hallmark of CKD is tubulo-interstitial injury that leads to a surplus of extracellular matrix (ECM) protein deposition leading to fibrosis and scarring. The mechanisms underlying kidney fibrosis are complicated and still under investigation. However, recent advances in sequencing technologies and the emergence of the omics era have enabled researchers to answer many questions surrounding this topic, thereby facilitating the discovery of fibrotic injury biomarkers and the identification of antifibrotic therapeutic targets.
+- Chronic kidney disease (CKD) is a heterogenous disease that refers to any abnormalities in the structure of function of the kidneys that is present for more than 3 months. A hallmark of CKD is tubulo-interstitial injury that leads to a surplus of extracellular matrix (ECM) protein deposition leading to renal fibrosis and scarring. Among the causes of renal fibrosis is uringary outlet obstruction, leading to impaired urinary flow, kidney enlargement, and ultimately, renal fibrosis. Currently, the most common mouse model to study renal tubulointerstitial fibrosis is the unilateral ureteral obstruction (UUO) model. The mechanisms underlying kidney fibrosis are complicated and still under investigation. However, recent advances in sequencing technologies and the emergence of the omics era have enabled researchers to answer many questions surrounding this topic, thereby facilitating the discovery of fibrotic injury biomarkers and the identification of antifibrotic therapeutic targets.
   
 - Secreted modular calcium-binding protein 2 (SMOC2) is a protein belonging to the Secreted Protein Acidic and Rich in Cysteine (SPARC) matricellular protein family. It is secreted in the extracellular space and interact with a variety of bioactive effectors including structural matrix proteins, cell surface receptors, growth factors, and proteases. It serves to regulate cell-matrix interactions and cell functions. SMOC2 is mainly secreted in the kidneys, lungs, ovaries, and skeletal muscles. Owing to its role in triggering the fibroblast-to-myofibroblast transition (FMT), SMOC2 has been implicated in the progression of fibrotic disorders. However, the mechanisms underlying SMOC2's involvement in initiating fibrosis have yet to be fully uncovered, making it a target of interest in the study of fibrotic disorder intiation and progression.
 
@@ -85,7 +85,29 @@
 
 ### Enrichment analysis:
 
+- The most significantly enriched BP terms are fatty acid metabolic process and organic anion transport, followed by a large number of immune-related terms, including leukocyte proliferation, T cell activation, regulation of immune effector process, and lymphocyte proliferation. Immune system activation and metabolic reprogramming are characteristics of renal fibrosis.
+
+![](/smoc2_plots/smoc2_bp_enrichment_map.jpg)
+
+![](/smoc2_plots/smoc2_go_bp_dot.jpg)
+
+- The top MF terms are include transmembrane transporter activities (active, organic acid, carboxylic acid, and metal ion), actin binding, and cell adhesion molecule binding. The emap shows these transporter terms form a tight connected cluster, suggesting dysregulation of ion and solute transport, which is crucial to tubular dysfunction in the fibrotic kidney. Extracellular matrix structural constituent and glycosaminoglycan binding are also present, which are involved in ECM remodeling.
+
+![](/smoc2_plots/smoc2_mf_enrichment_map.jpg)
+
+![](/smoc2_plots/smoc2_go_mf_dot.jpg)
+
+- The CC results highlight mitochondrial compartments (mitochondrial matrix, NADH dehydrogenase complex, and respiratory chain complex) and plasma membrane domains (basolateral, apical, and basal plasma membrane). The presence of the collagen-containing extracellular matrix term further supports ECM remodeling.
+
 ### GSEA:
+
+- The most significantly enriched KEGG pathways include oxidative phosphorylation, diabetic cardiomyopathy, Alzheimer's disease, and Parkinson's disease, in which common phenomenons involved include reprogrammed metabolism and mitochondrial dysfunction, a hallmark of fibrotic tissue. Integrin signaling and IgSF CAM signaling also appear, which are involved in ECM remodeling and cell adhesion changes consistent with SMOC2's known role as a matricellular protein. The cytokine-cytokine receptor interaction and Th17 cell differentiation terms suggest immune/inflammatory activation in the fibrotic kidney.
+
+![](/smoc2_plots/smoc2_kegg_bar.jpg)
+
+![](/smoc2_plots/smoc2_kegg_dot.jpg)
+
+- The GSEA results show that the strongest activated signal is cytokine-cytokine receptor interaction, amongst TNF signaling, IL-17 signaling, NF-κB signaling, and chemokine signaling. This suggests a pro-inflammatory signature. Additionally, cell adhesion molecule (CAM) interaction and osteoclast differentiation denote ECM remodeling and tissue remodeling responses, in line with SMOC2's role as a matricellular protein that promotes fibroblast activation. Whereas the suppressed signals indicate signs of mitochondrial dysfunction and metabolic reprogramming: oxidative phosphorylation and thermogenesis, as well as carbon metabolism, propanoate metabolism, glyoxylate and dicarboxylate metabolism, and amino acid degradation pathways suggest the dysfunction of key metabolic pathways. Furthermore, peroxisome suppression suggests impaired fatty acid oxidation.
 
 ---
 
@@ -119,3 +141,4 @@
 2. Huang, R., Fu, P. & Ma, L. Kidney fibrosis: from mechanisms to therapeutic medicines. Sig Transduct Target Ther 8, 129 (2023). https://doi.org/10.1038/s41392-023-01379-7
 3. Xin C, Lei J, Wang Q. Therapeutic silencing of SMOC2 prevents kidney function loss in mouse model of chronic kidney disease, iScience, 2021; 24. https://www.cell.com/iscience/fulltext/S2589-0042(21)01161-5
 4. Rui H, Zhao F, Yuhua L and Hong J (2023) Suppression of SMOC2 alleviates myocardial fibrosis via the ILK/p38 pathway. Front. Cardiovasc. Med. 9:951704. doi: 10.3389/fcvm.2022.951704
+5. Zhu X, Jiang L, Long M, Wei X, Hou Y, Du Y. Metabolic Reprogramming and Renal Fibrosis. Front Med (Lausanne). 2021 Nov 8;8:746920. doi: 10.3389/fmed.2021.746920. PMID: 34859009; PMCID: PMC8630632.
