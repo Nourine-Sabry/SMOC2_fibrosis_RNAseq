@@ -249,3 +249,33 @@ ridgeplot(gsea_kegg, showCategory = 10)
 
 # GSEA plot for a single pathway
 gseaplot2(gsea_kegg, geneSetID = 1, title = gsea_kegg$Description[1])
+
+###############################################################################################################################################################################################
+# N.B.: This is an updated GSEA KEGG to improve visibility:
+library(ggplot2)
+
+gsea_df <- as.data.frame(gsea_kegg)
+
+gsea_df$direction <- ifelse(gsea_df$NES > 0, "Activated", "Suppressed")
+
+# Take top 15 per direction
+gsea_top <- gsea_df %>%
+  group_by(direction) %>%
+  slice_min(order_by = p.adjust, n = 15) %>%
+  ungroup() %>%
+  mutate(Description = reorder(Description, NES))  # order by NES score
+
+# Plot
+ggplot(gsea_top, aes(x = NES, y = Description, size = setSize, color = p.adjust)) +
+  geom_point() +
+  facet_wrap(~ direction, scales = "free_y") +
+  scale_color_gradient(low = "red", high = "blue") +
+  labs(x = "Normalized Enrichment Score (NES)",
+       y = NULL,
+       color = "Adjusted p-value",
+       size = "Gene set size",
+       title = "GSEA KEGG Pathway Enrichment") +
+  theme_bw() +
+  theme(axis.text.y = element_text(size = 9),
+        strip.text = element_text(size = 11, face = "bold"),
+        plot.title = element_text(hjust = 0.5))
